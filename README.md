@@ -4,7 +4,10 @@ This project utilizes Selenium with Robot Framework to automate testing of the w
 
 ## Introduction
 
-This project aims to demonstrate how to use Selenium with Robot Framework for automated testing purposes. The tests included in this project focus on adding and removing elements dynamically from a webpage.
+This project caters to individuals who are in the process of learning Selenium and Robot Framework, 
+seeking practical examples for hands-on study. Through exploration of the provided test cases and examples, 
+learners can acquire firsthand experience in automating web interactions. 
+I aspire for this project to serve as a valuable resource for those embarking on their automation journey
 
 ## Installation
 
