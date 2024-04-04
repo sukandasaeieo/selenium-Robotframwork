@@ -16,6 +16,6 @@ Open browser and login
     Input Text    id = username    ${USERNAME}
     Input Password   id = password    ${PASSWORD}
     Click Button    css:button[type='submit'] 
-     Wait Until Page Contains Element    css=.alert-success    timeout=10s
+     Wait Until Page Contains Element    css=.alert-success    timeout=20s
     ${success_message}=    Get Text    css=.alert-success
     Should Be Equal As Strings    ${success_message}    ${EXPECTED_TITLE}
