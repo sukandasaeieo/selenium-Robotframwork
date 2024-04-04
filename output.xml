@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.9.0 on win32)" generated="2024-04-04T14:25:26.638591" rpa="false" schemaversion="5">
+<suite id="s1" name="loginTest" source="c:\Users\sukan\Desktop\seleniumRobot\loginTest.robot">
+<test id="s1-t1" name="Open browser and login" line="14">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-04-04T14:25:26.869319" level="INFO">Opening browser 'Chrome' to base url 'https://practice.expandtesting.com/login'.</msg>
+<arg>${LOGIN_URL}</arg>
+<arg>browser=${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-04T14:25:26.869319" elapsed="2.684682"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-04T14:25:29.556040" level="INFO">Typing text 'practice' into text field 'id = username'.</msg>
+<arg>id = username</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-04T14:25:29.555026" elapsed="0.124768"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-04-04T14:25:29.681061" level="INFO">Typing password into text field 'id = password'.</msg>
+<msg time="2024-04-04T14:25:29.723209" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>id = password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-04T14:25:29.681061" elapsed="0.147456"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-04-04T14:25:29.829374" level="INFO">Clicking button 'css:button[type='submit']'.</msg>
+<arg>css:button[type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-04T14:25:29.829374" elapsed="1.174368"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>css=.alert-success</arg>
+<arg>timeout=20s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-04-04T14:25:31.004730" elapsed="0.013123"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-04-04T14:25:31.041841" level="INFO">${success_message} = You logged into a secure area!</msg>
+<var>${success_message}</var>
+<arg>css=.alert-success</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-04T14:25:31.017853" elapsed="0.023988"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${success_message}</arg>
+<arg>${EXPECTED_TITLE}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-04-04T14:25:31.041841" elapsed="0.001003"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-04-04T14:25:31.043843" elapsed="2.107935"/>
+</kw>
+<status status="PASS" start="2024-04-04T14:25:26.869319" elapsed="6.282459"/>
+</test>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2024-04-04T14:25:33.151778" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-04-04T14:25:26.644251" elapsed="6.507527"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="loginTest">loginTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
